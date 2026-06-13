@@ -2,7 +2,7 @@ module status_signal (
     input  wire        clk,
     input  wire        clr,              // 低有效异步复位
 
-    input  wire        continue,            // 电平信号
+    input  wire        continue_signal,     // 电平信号
     input  wire        confirm_pulse,          // 边沿触发
 
     input  wire        done,
@@ -34,16 +34,19 @@ end
 // 第二段：组合逻辑 —— 次态生成与输出
 always @(*) begin
     // 默认值
-    dis_state    = current_state;    // 直接输出当前状态编码
+    next_state = current_state;
+    config_set = 1'b0;
+    run        = 1'b0;
+    dis_state  = current_state;    // 直接输出当前状态编码
 
     case (current_state)
         INIT: begin
             config_set = 1'b1;       // 只有 INIT 状态允许设置
             run = 1'b0;
             if (warn)
-            next_state = FAULT;
+                next_state = FAULT;
             else if (config_valid)
-            next_state = RUNNING;
+                next_state = RUNNING;
         end
 
         FAULT: begin
@@ -51,16 +54,16 @@ always @(*) begin
             run          = 1'b0;
             // FAULT 状态下无 config_set 和 run
             if (confirm_pulse)
-            next_state = INIT;
+                next_state = INIT;
         end
 
         RUNNING: begin
             run = 1'b1;              // 只有 RUNNING 状态使能计数
             config_set   = 1'b0;
             if (done)
-            next_state = PAUSE;
+                next_state = PAUSE;
             else if (confirm_pulse)
-            next_state = PAUSE;
+                next_state = PAUSE;
         end
 
         PAUSE: begin
@@ -73,10 +76,10 @@ always @(*) begin
             if (done && confirm_pulse) begin
                 next_state = INIT;
             end
-            else if (!done && confirm_pulse && continue) begin
+            else if (!done && confirm_pulse && continue_signal) begin
                 next_state = RUNNING;
             end
-            else if (!done && confirm_pulse && !continue) begin
+            else if (!done && confirm_pulse && !continue_signal) begin
                 next_state = INIT;
             end
         end

@@ -37,6 +37,7 @@ wire config_valid;
 wire warn;
 wire config_set;
 wire run;
+wire done;
 wire [1:0] state;
 
 wire [3:0] pill_low;
@@ -48,6 +49,8 @@ wire [3:0] d2;
 wire [3:0] d1;
 wire [3:0] c2;
 wire [3:0] c1;
+
+assign disp_state = state;
 
 config_core u_config_core (
     .clk(clk),
@@ -68,7 +71,7 @@ status_signal u_status_signal(
     .clk(clk),
     .clr(clr),              // 低有效异步复位
 
-    .continue(start),            // 电平信号
+    .continue_signal(start),     // 电平信号
     .confirm_pulse(confirm_pulse),          // 边沿触发
 
     .done(done),

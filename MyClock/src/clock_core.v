@@ -26,12 +26,15 @@ wire speaker_d;
 assign set_mode_en = (mode_sel == 2'b01 || mode_sel == 2'b10);
 
 //time_core的信号
-wire [3:0] time_sec_high,time_min_low,time_min_high;
+wire [3:0] time_sec_low, time_sec_high, time_min_low, time_min_high;
 wire [3:0] time_hour_low,time_hour_high;
 
 wire [6:0] time_seg_sec_low;
 //set_time_core的信号
 wire time_load_en;
+wire set_en = 1'b0;
+wire [3:0] set_low = 4'd0;
+wire [3:0] set_high = 4'd0;
 
 wire [3:0] set_min_low, set_min_high;
 wire [3:0] set_hour_low, set_hour_high;
@@ -39,8 +42,8 @@ wire [3:0] set_hour_low, set_hour_high;
 wire [6:0] set_disp_sec_low;
 wire field_output;
 //alarm
-// wire alarm_match;
-// wire alarm_ring_req;
+wire alarm_match;
+wire alarm_ring_req;
 
 // 实例化 set_time_core
 settime_alarm_core u_set_time (
@@ -67,12 +70,12 @@ settime_alarm_core u_set_time (
     .disp_hour_high(set_hour_high),
 
     .field_output(field_output),
-    .speaker(speaker_d)
+    .speaker(speaker_d),
 
     //.seg_sec_low(set_disp_sec_low)
 
-    // .alarm_match(alarm_match),
-    // .alarm_ring_req(alarm_ring_req)
+    .alarm_match(alarm_match),
+    .alarm_ring_req(alarm_ring_req)
 
 );
 
@@ -90,6 +93,7 @@ time_core u_time_core(
     .time_load_hour_low(set_hour_low),
     .time_load_hour_high(set_hour_high),
 
+    .bcd_sec_low(time_sec_low),
     .seg_sec_low(time_seg_sec_low),
     .bcd_sec_high(time_sec_high),
     .bcd_min_low(time_min_low),
