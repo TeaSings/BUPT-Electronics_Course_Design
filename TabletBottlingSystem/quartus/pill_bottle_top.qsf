@@ -1,0 +1,87 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+# Date created = 11:41:55  May 20, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		pill_bottle_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX7000S
+set_global_assignment -name DEVICE "EPM7128SLC84-15"
+set_global_assignment -name TOP_LEVEL_ENTITY pill_bottle_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:41:55  MAY 20, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.1
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name VERILOG_FILE ../src/total_pills2.v
+set_global_assignment -name VERILOG_FILE ../src/bcd_to_7_seg.v
+set_global_assignment -name VERILOG_FILE ../src/bottle_counter.v
+set_global_assignment -name VERILOG_FILE ../src/config_core.v
+set_global_assignment -name VERILOG_FILE ../src/display_mux.v
+set_global_assignment -name VERILOG_FILE ../src/pill_bottle_core.v
+set_global_assignment -name VERILOG_FILE ../src/pill_bottle_top.v
+set_global_assignment -name VERILOG_FILE ../src/pill_counter.v
+set_global_assignment -name VERILOG_FILE ../src/status_signal.v
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_57 -to clk
+set_location_assignment PIN_1 -to clr
+set_location_assignment PIN_54 -to confirm
+set_location_assignment PIN_60 -to inc
+set_location_assignment PIN_79 -to set_sel[1]
+set_location_assignment PIN_80 -to set_sel[0]
+set_location_assignment PIN_81 -to start
+set_location_assignment PIN_76 -to disp_sel[1]
+set_location_assignment PIN_77 -to disp_sel[0]
+set_location_assignment PIN_41 -to disp2[3]
+set_location_assignment PIN_40 -to disp2[2]
+set_location_assignment PIN_39 -to disp2[1]
+set_location_assignment PIN_37 -to disp2[0]
+set_location_assignment PIN_18 -to disp3[3]
+set_location_assignment PIN_17 -to disp3[2]
+set_location_assignment PIN_36 -to disp3[1]
+set_location_assignment PIN_35 -to disp3[0]
+set_location_assignment PIN_34 -to disp4[3]
+set_location_assignment PIN_33 -to disp4[2]
+set_location_assignment PIN_31 -to disp4[1]
+set_location_assignment PIN_30 -to disp4[0]
+set_location_assignment PIN_29 -to disp5[3]
+set_location_assignment PIN_28 -to disp5[2]
+set_location_assignment PIN_27 -to disp5[1]
+set_location_assignment PIN_25 -to disp5[0]
+set_location_assignment PIN_24 -to disp6[3]
+set_location_assignment PIN_22 -to disp6[2]
+set_location_assignment PIN_21 -to disp6[1]
+set_location_assignment PIN_20 -to disp6[0]
+set_location_assignment PIN_58 -to tick

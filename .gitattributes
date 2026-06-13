@@ -1,0 +1,11 @@
+* text=auto
+
+.gitattributes text eol=lf
+*.md text eol=lf
+*.v text eol=lf
+*.vhd text eol=lf
+*.qpf text eol=lf
+*.qsf text eol=lf
+*.qdf text eol=lf
+*.cdf text eol=lf
+*.svg text eol=lf

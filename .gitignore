@@ -1,0 +1,53 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# Course documents kept locally, not in the source repository
+*.doc
+*.docx
+*.pdf
+*.ppt
+*.pptx
+docs/ppt/
+
+# Generated diagrams and helper scripts; README uses the SVG exports
+docs/figures/*.png
+docs/figures/*.cjs
+
+# Simulation / backup files
+*.vcd
+*.bak
+
+# Quartus generated files
+**/.quartus_check/
+**/.sopc_builder/
+**/db/
+**/incremental_db/
+*.asm.rpt
+*.fit.rpt
+*.flow.rpt
+*.map.rpt
+*.tan.rpt
+*.rpt
+*.summary
+*.done
+*.pof
+*.sof
+*.pin
+*.dpf
+*.qws
+*.qmsg
+*.smsg
+*.log
+*.logdb
+*.cdb
+*.hdb
+*.ddb
+*.rdb
+*.tdb
+*.xml
+*.html
+*.dat
+*.txt

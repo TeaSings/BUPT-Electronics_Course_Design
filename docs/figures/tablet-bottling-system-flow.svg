@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3500" height="1620" viewBox="0 0 3500 1620">
+  <defs>
+    <style>
+      text {
+        font-family: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+        fill: #0f172a;
+        letter-spacing: 0;
+      }
+      .title { font-size: 92px; font-weight: 850; }
+      .file-title { font-size: 44px; font-weight: 850; fill: #334155; }
+      .box-title { font-size: 40px; font-weight: 850; }
+      .box-body { font-size: 33px; fill: #334155; }
+      .label { font-size: 29px; font-weight: 820; }
+      .tiny { font-size: 28px; fill: #475569; }
+    </style>
+    <marker id="arrow-control" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="13" markerHeight="13" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+  </marker>
+<marker id="arrow-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="13" markerHeight="13" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+  </marker>
+<marker id="arrow-pulse" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="13" markerHeight="13" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
+  </marker>
+<marker id="arrow-state" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="13" markerHeight="13" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+  </marker>
+<marker id="arrow-alert" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="13" markerHeight="13" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+  </marker>
+<marker id="arrow-display" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="13" markerHeight="13" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+  </marker>
+  </defs>
+  <rect width="3500" height="1620" fill="#f8fafc"/>
+  <g transform="translate(0 -170)">
+  <rect x="80" y="240" width="430" height="230" rx="14" fill="#f5f7fb" stroke="#5c6675" stroke-width="4"/>
+  <text class="box-title" x="106" y="296">外部输入</text>
+  <text class="box-body" x="106" y="344">clk / clr / tick</text>
+<text class="box-body" x="106" y="386">start / confirm</text>
+<text class="box-body" x="106" y="428">set_sel / inc / disp_sel</text><rect x="2860" y="1460" width="300" height="220" rx="14" fill="#f5f7fb" stroke="#5c6675" stroke-width="4"/>
+  <text class="box-title" x="2886" y="1516">外部输出</text>
+  <text class="box-body" x="2886" y="1564">disp6~disp2</text>
+<text class="box-body" x="2886" y="1606">disp_state 未赋值</text><rect x="640" y="190" width="1220" height="300" rx="16" fill="#eef4f8" stroke="#8aa0b8" stroke-width="4"/>
+  <text class="file-title" x="668" y="248">pill_bottle_top.v</text><rect x="780" y="305" width="900" height="170" rx="14" fill="#fff2e8" stroke="#ea580c" stroke-width="4"/>
+  <text class="box-title" x="808" y="361">确认脉冲与顶层连线</text>
+  <text class="box-body" x="808" y="405">confirm_pulse</text>
+<text class="box-body" x="808" y="445">连接配置 / 状态 / 计数 / 显示</text><rect x="120" y="690" width="620" height="350" rx="16" fill="#eef4f8" stroke="#8aa0b8" stroke-width="4"/>
+  <text class="file-title" x="148" y="748">config_core.v</text><rect x="230" y="830" width="455" height="175" rx="14" fill="#eef4ff" stroke="#2563eb" stroke-width="4"/>
+  <text class="box-title" x="258" y="886">参数设置与校验</text>
+  <text class="box-body" x="258" y="930">输出 config_valid / warn</text>
+<text class="box-body" x="258" y="970">输出 max_pill / target</text><rect x="830" y="610" width="1240" height="760" rx="16" fill="#eef4f8" stroke="#8aa0b8" stroke-width="4"/>
+  <text class="file-title" x="858" y="668">status_signal.v（四状态状态机）</text><rect x="960" y="770" width="370" height="155" rx="14" fill="#f5f1ff" stroke="#7c3aed" stroke-width="4"/>
+  <text class="box-title" x="988" y="826">INIT</text>
+  <text class="box-body" x="988" y="870">允许配置</text>
+<text class="box-body" x="988" y="910">config_set = 1</text><rect x="1510" y="770" width="410" height="155" rx="14" fill="#f5f1ff" stroke="#7c3aed" stroke-width="4"/>
+  <text class="box-title" x="1538" y="826">RUNNING</text>
+  <text class="box-body" x="1538" y="870">系统运行</text>
+<text class="box-body" x="1538" y="910">run = 1</text><rect x="960" y="1070" width="370" height="155" rx="14" fill="#f5f1ff" stroke="#7c3aed" stroke-width="4"/>
+  <text class="box-title" x="988" y="1126">FAULT</text>
+  <text class="box-body" x="988" y="1170">配置非法</text>
+<text class="box-body" x="988" y="1210">confirm 回 INIT</text><rect x="1510" y="1070" width="410" height="155" rx="14" fill="#f5f1ff" stroke="#7c3aed" stroke-width="4"/>
+  <text class="box-title" x="1538" y="1126">PAUSE</text>
+  <text class="box-body" x="1538" y="1170">暂停 / 完成</text>
+<text class="box-body" x="1538" y="1210">confirm 后切换</text><rect x="2220" y="660" width="680" height="320" rx="16" fill="#eef4f8" stroke="#8aa0b8" stroke-width="4"/>
+  <text class="file-title" x="2248" y="718">pill_bottle_core.v</text><rect x="2335" y="800" width="470" height="170" rx="14" fill="#fff2e8" stroke="#ea580c" stroke-width="4"/>
+  <text class="box-title" x="2363" y="856">计数使能生成</text>
+  <text class="box-body" x="2363" y="900">tick 边沿检测</text>
+<text class="box-body" x="2363" y="940">count_en = tick &amp; run</text><rect x="2220" y="1110" width="680" height="320" rx="16" fill="#eef4f8" stroke="#8aa0b8" stroke-width="4"/>
+  <text class="file-title" x="2248" y="1168">计数器文件（简化）</text><rect x="2315" y="1250" width="520" height="170" rx="14" fill="#edfdf0" stroke="#16a34a" stroke-width="4"/>
+  <text class="box-title" x="2343" y="1306">底层计数执行</text>
+  <text class="box-body" x="2343" y="1350">pill / bottle / total counter</text>
+<text class="box-body" x="2343" y="1390">产生 full_pulse / done / BCD</text><rect x="2040" y="1530" width="760" height="250" rx="16" fill="#eef4f8" stroke="#8aa0b8" stroke-width="4"/>
+  <text class="file-title" x="2068" y="1588">display_mux.v</text><rect x="2190" y="1620" width="470" height="130" rx="14" fill="#f4f7fb" stroke="#475569" stroke-width="4"/>
+  <text class="box-title" x="2218" y="1676">显示选择与复用</text>
+  <text class="box-body" x="2218" y="1720">state + disp_sel -&gt; disp*</text><path d="M 510 355 L 780 375" fill="none" stroke="#2563eb" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-control)"/>
+  <rect x="525" y="282" width="130" height="69" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="2.4"/>
+  <text class="label" x="590" y="316.5" text-anchor="middle" dominant-baseline="middle" fill="#2563eb">输入信号</text><path d="M 660 910 L 790 910 L 790 850 L 960 850" fill="none" stroke="#dc2626" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-alert)"/>
+  <rect x="715" y="744" width="260" height="104" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="2.4"/>
+  <text class="label" x="845" y="778.5" text-anchor="middle" dominant-baseline="middle" fill="#dc2626">config_valid</text>
+<text class="label" x="845" y="813.5" text-anchor="middle" dominant-baseline="middle" fill="#dc2626">/ warn</text><path d="M 1330 850 L 1510 850" fill="none" stroke="#dc2626" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-alert)"/>
+  <rect x="1355" y="684" width="260" height="69" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="2.4"/>
+  <text class="label" x="1485" y="718.5" text-anchor="middle" dominant-baseline="middle" fill="#dc2626">config_valid</text><path d="M 1145 925 L 1145 1070" fill="none" stroke="#dc2626" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-alert)"/>
+  <rect x="1167" y="976" width="130" height="69" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="2.4"/>
+  <text class="label" x="1232" y="1010.5" text-anchor="middle" dominant-baseline="middle" fill="#dc2626">warn</text><path d="M 1715 925 L 1715 1070" fill="none" stroke="#dc2626" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-alert)"/>
+  <rect x="1737" y="976" width="296" height="69" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="2.4"/>
+  <text class="label" x="1885" y="1010.5" text-anchor="middle" dominant-baseline="middle" fill="#dc2626">done / confirm</text><path d="M 1920 850 L 2350 872" fill="none" stroke="#2563eb" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-control)"/>
+  <rect x="1995" y="770" width="134" height="69" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="2.4"/>
+  <text class="label" x="2062" y="804.5" text-anchor="middle" dominant-baseline="middle" fill="#2563eb">run=1</text><path d="M 2565 945 L 2565 1250" fill="none" stroke="#ea580c" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-pulse)"/>
+  <rect x="2587" y="1060" width="188" height="69" rx="9" fill="#ffffff" stroke="#ea580c" stroke-width="2.4"/>
+  <text class="label" x="2681" y="1094.5" text-anchor="middle" dominant-baseline="middle" fill="#ea580c">count_en</text><path d="M 2565 1395 L 2565 1620" fill="none" stroke="#16a34a" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-data)"/>
+  <rect x="2587" y="1476" width="152" height="69" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2.4"/>
+  <text class="label" x="2663" y="1510.5" text-anchor="middle" dominant-baseline="middle" fill="#16a34a">计数 BCD</text><path d="M 2660 1685 L 2860 1570" fill="none" stroke="#475569" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-display)"/>
+  <rect x="2695" y="1592" width="134" height="69" rx="9" fill="#ffffff" stroke="#475569" stroke-width="2.4"/>
+  <text class="label" x="2762" y="1626.5" text-anchor="middle" dominant-baseline="middle" fill="#475569">disp*</text>
+  </g>
+  <g>
+    <rect x="2220" y="40" width="940" height="142" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.5"/>
+    <text class="tiny" x="2244" y="86" font-weight="780">颜色含义</text>
+    <rect x="2248" y="101" width="26" height="26" rx="5" fill="#eef4ff" stroke="#2563eb" stroke-width="2.4"/>
+        <text class="tiny" x="2290" y="124">控制/使能</text>
+<rect x="2573" y="101" width="26" height="26" rx="5" fill="#edfdf0" stroke="#16a34a" stroke-width="2.4"/>
+        <text class="tiny" x="2615" y="124">数据/BCD</text>
+<rect x="2898" y="101" width="26" height="26" rx="5" fill="#fff2e8" stroke="#ea580c" stroke-width="2.4"/>
+        <text class="tiny" x="2940" y="124">脉冲/进位</text>
+<rect x="2248" y="141" width="26" height="26" rx="5" fill="#f5f1ff" stroke="#7c3aed" stroke-width="2.4"/>
+        <text class="tiny" x="2290" y="164">状态</text>
+<rect x="2573" y="141" width="26" height="26" rx="5" fill="#fff1f1" stroke="#dc2626" stroke-width="2.4"/>
+        <text class="tiny" x="2615" y="164">告警/完成</text>
+<rect x="2898" y="141" width="26" height="26" rx="5" fill="#f4f7fb" stroke="#475569" stroke-width="2.4"/>
+        <text class="tiny" x="2940" y="164">显示/输出</text>
+  </g>
+</svg>
