@@ -2,7 +2,7 @@ module status_signal (
     input  wire        clk,
     input  wire        clr,              // 低有效异步复位
 
-    input  wire        continue_signal,     // 电平信号
+    input  wire        continue_en,         // 电平信号
     input  wire        confirm_pulse,          // 边沿触发
 
     input  wire        done,
@@ -76,10 +76,10 @@ always @(*) begin
             if (done && confirm_pulse) begin
                 next_state = INIT;
             end
-            else if (!done && confirm_pulse && continue_signal) begin
+            else if (!done && confirm_pulse && continue_en) begin
                 next_state = RUNNING;
             end
-            else if (!done && confirm_pulse && !continue_signal) begin
+            else if (!done && confirm_pulse && !continue_en) begin
                 next_state = INIT;
             end
         end

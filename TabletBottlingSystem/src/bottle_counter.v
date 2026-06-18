@@ -35,7 +35,7 @@ always @(posedge clk or negedge clr) begin
             output_low <= 4'd0;
             output_high <= 4'd0;
             done <= 1'b0;
-        end else if (count_en && inc_bottle) begin
+        end else if (inc_bottle) begin
             if (next_low == target_low && next_high == target_high) begin
                 output_low <= target_low;
                 output_high <= target_high;

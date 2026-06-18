@@ -54,6 +54,7 @@ set_global_assignment -name VERILOG_FILE ../src/pill_bottle_core.v
 set_global_assignment -name VERILOG_FILE ../src/pill_bottle_top.v
 set_global_assignment -name VERILOG_FILE ../src/pill_counter.v
 set_global_assignment -name VERILOG_FILE ../src/status_signal.v
+set_global_assignment -name VERILOG_FILE ../src/spliter.v
 set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
 set_location_assignment PIN_57 -to clk
 set_location_assignment PIN_1 -to clr
@@ -85,3 +86,12 @@ set_location_assignment PIN_22 -to disp6[2]
 set_location_assignment PIN_21 -to disp6[1]
 set_location_assignment PIN_20 -to disp6[0]
 set_location_assignment PIN_58 -to tick
+set_location_assignment PIN_52 -to speaker
+set_location_assignment PIN_56 -to clk_speaker
+set_location_assignment PIN_44 -to disp1[0]
+set_location_assignment PIN_45 -to disp1[1]
+set_location_assignment PIN_46 -to disp1[2]
+set_location_assignment PIN_48 -to disp1[3]
+set_location_assignment PIN_49 -to disp1[4]
+set_location_assignment PIN_50 -to disp1[5]
+set_location_assignment PIN_51 -to disp1[6]

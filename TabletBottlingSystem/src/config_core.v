@@ -31,11 +31,10 @@ always @(posedge clk or negedge clr) begin
         inc_d <= 1'b0;
     end else begin
         inc_d <= inc;
+        config_valid <= 1'b0;
+        warn <= 1'b0;
 
         if (start_setting && inc_pulse) begin
-            config_valid <= 1'b0;
-            warn <= 1'b0;
-
             case (set_sel)
                 2'b00: max_pill_low <= (max_pill_low == 4'd9) ? 4'd0 : max_pill_low + 1'b1;
                 2'b01: max_pill_high <= (max_pill_high == 4'd9) ? 4'd0 : max_pill_high + 1'b1;
@@ -46,9 +45,7 @@ always @(posedge clk or negedge clr) begin
         end else if (start_setting && confirm) begin
             if (setting_valid) begin
                 config_valid <= 1'b1;
-                warn <= 1'b0;
             end else begin
-                config_valid <= 1'b0;
                 warn <= 1'b1;
             end
         end
