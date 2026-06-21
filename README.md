@@ -2,6 +2,41 @@
 
 这是北京邮电大学 2026 年春季《数字逻辑与数字系统》课程设计项目仓库，包含两个基于 Verilog 的数字系统：数字电子钟和药片装瓶系统。项目面向 TEC-8 / Altera EPM7128SLC84-15 实验平台，使用 Quartus II 建立工程、完成编译并进行上板验证。
 
+## 小组成员
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/TeaSings">
+        <img src="https://github.com/TeaSings.png" width="72" alt="陈同学" />
+        <br />
+        <sub><b>陈同学</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Macixel">
+        <img src="https://github.com/Macixel.png" width="72" alt="刘同学" />
+        <br />
+        <sub><b>刘同学</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Errormecium">
+        <img src="https://github.com/Errormecium.png" width="72" alt="柯同学" />
+        <br />
+        <sub><b>柯同学</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Xuanx-7">
+        <img src="https://github.com/Xuanx-7.png" width="72" alt="李同学" />
+        <br />
+        <sub><b>李同学</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## 项目
 
 ### MyClock：数字电子钟系统
