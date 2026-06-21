@@ -8,30 +8,30 @@
   <tr>
     <td align="center">
       <a href="https://github.com/TeaSings">
-        <img src="https://github.com/TeaSings.png" width="72" alt="陈同学" />
+        <img src="https://github.com/TeaSings.png" width="72" alt="TeaSings" />
         <br />
-        <sub><b>陈同学</b></sub>
+        <sub><b>TeaSings</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/Macixel">
-        <img src="https://github.com/Macixel.png" width="72" alt="刘同学" />
+        <img src="https://github.com/Macixel.png" width="72" alt="Macixel" />
         <br />
-        <sub><b>刘同学</b></sub>
+        <sub><b>Macixel</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/Errormecium">
-        <img src="https://github.com/Errormecium.png" width="72" alt="柯同学" />
+        <img src="https://github.com/Errormecium.png" width="72" alt="Errormecium" />
         <br />
-        <sub><b>柯同学</b></sub>
+        <sub><b>Errormecium</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/Xuanx-7">
-        <img src="https://github.com/Xuanx-7.png" width="72" alt="李同学" />
+        <img src="https://github.com/Xuanx-7.png" width="72" alt="Xuanx-7" />
         <br />
-        <sub><b>李同学</b></sub>
+        <sub><b>Xuanx-7</b></sub>
       </a>
     </td>
   </tr>
